@@ -1,0 +1,2 @@
+# Count the .sql file as this repo's language on GitHub
+*.sql linguist-detectable=true linguist-language=SQL
