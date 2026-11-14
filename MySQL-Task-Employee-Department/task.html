@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>MySQL Task - Vineetsing Girase</title>
+<style>
+  @page { size: A4; margin: 16mm 14mm; }
+  body { font-family: "Segoe UI", Arial, sans-serif; color: #1a1a1a; font-size: 11pt; }
+  .cover { text-align: center; padding-top: 70mm; page-break-after: always; }
+  .cover h1 { font-size: 28pt; margin: 0 0 6mm; }
+  .cover .sub { font-size: 14pt; color: #444; margin: 2mm 0; }
+  .cover .line { width: 60mm; height: 2px; background: #1a1a1a; margin: 10mm auto; }
+  .cover table { margin: 0 auto; font-size: 12pt; border-collapse: collapse; }
+  .cover td { padding: 2mm 5mm; text-align: left; }
+  .cover td:first-child { color: #555; }
+  .q { page-break-inside: avoid; margin-bottom: 9mm; }
+  .q h2 { font-size: 13pt; margin: 0 0 2mm; border-left: 4px solid #1a1a1a; padding-left: 3mm; }
+  .q p { margin: 0 0 3mm; color: #333; }
+  .q img { max-width: 100%; border: 1px solid #ccc; display: block; }
+  .q img + img { margin-top: 3mm; }
+  .break { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>MySQL Task</h1>
+  <div class="sub">Employee &amp; Department Database</div>
+  <div class="sub">Constraints, Queries, Joins and Subqueries</div>
+  <div class="line"></div>
+  <table>
+    <tr><td>Name</td><td><b>Vineetsing Girase</b></td></tr>
+    <tr><td>Institute</td><td>I.T. Vedant</td></tr>
+    <tr><td>Batch</td><td>T232 / 9-11am / JFSD10</td></tr>
+    <tr><td>Database</td><td>leave (MySQL 8.0)</td></tr>
+    <tr><td>Date</td><td>14 November 2026</td></tr>
+  </table>
+</div>
+
+<div class="q">
+  <h2>Setup: Create the database and the Department table</h2>
+  <p>The Employee table's dept_id is a FOREIGN KEY, so a Department table is created first (with the 'IT' department, as Q5 assumes).</p>
+  <img src="screenshots/setup1.png">
+  <img src="screenshots/setup2.png">
+</div>
+
+<div class="q break">
+  <h2>Q1. Create an Employee table</h2>
+  <p>emp_id as PRIMARY KEY, emp_name as NOT NULL, email as UNIQUE, salary with CHECK (salary &gt; 0), dept_id as FOREIGN KEY.</p>
+  <img src="screenshots/q1.png">
+</div>
+
+<div class="q">
+  <h2>Q2. Insert employee details into the Employee table</h2>
+  <img src="screenshots/q2.png">
+</div>
+
+<div class="q break">
+  <h2>Q3. Display all the employees who are earning 30000 to 50000</h2>
+  <img src="screenshots/q3.png">
+</div>
+
+<div class="q">
+  <h2>Q4. Increase the salary of all employees by 10%</h2>
+  <img src="screenshots/q4.png">
+</div>
+
+<div class="q break">
+  <h2>Q5. Find employees who belong to the IT department</h2>
+  <img src="screenshots/q5.png">
+</div>
+
+<div class="q">
+  <h2>Q6. Display employee names along with their department names using INNER JOIN</h2>
+  <img src="screenshots/q6.png">
+</div>
+
+<div class="q break">
+  <h2>Q7. Display all employees, including employees not assigned to any department, using LEFT JOIN</h2>
+  <img src="screenshots/q7.png">
+</div>
+
+<div class="q">
+  <h2>Q8. Display departments that do not have any employees</h2>
+  <img src="screenshots/q8.png">
+</div>
+
+<div class="q break">
+  <h2>Q9. Display employees who are not assigned to any department</h2>
+  <img src="screenshots/q9.png">
+</div>
+
+<div class="q">
+  <h2>Q10. Find employees whose salary is greater than the average salary of all employees</h2>
+  <img src="screenshots/q10.png">
+</div>
+
+</body>
+</html>
