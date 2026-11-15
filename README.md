@@ -9,6 +9,8 @@ A MySQL database for a pet adoption centre. It stores pets and adopters and reco
 
 Database: `Finalpro`
 
+![Entity diagram: Pets and Adopters are linked through Adoption](docs/er-diagram.svg)
+
 | Table | Columns | Keys and rules |
 |---|---|---|
 | **Pets** | PetID, PetName, PetType, Age | PetID primary key · name and type NOT NULL · `CHECK(Age>0)` |
