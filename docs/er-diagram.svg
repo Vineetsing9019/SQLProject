@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="400" viewBox="0 0 840 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="840" height="400" fill="#ffffff"/>
+  <text x="420" y="36" text-anchor="middle" font-size="20" font-weight="700" fill="#091747">Pet Adoption Database: tables and keys</text>
+
+  <!-- Pets -->
+  <rect x="20" y="70" width="290" height="170" rx="10" fill="#EEF0F8" stroke="#091747" stroke-width="2"/>
+  <rect x="20" y="70" width="290" height="36" rx="10" fill="#091747"/>
+  <text x="165" y="95" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Pets</text>
+  <text x="38" y="128" font-size="13" fill="#1d1b2c"><tspan font-weight="700" fill="#091747">PK</tspan>   PetID      INT</text>
+  <text x="38" y="152" font-size="13" fill="#1d1b2c">        PetName    VARCHAR(30) NOT NULL</text>
+  <text x="38" y="176" font-size="13" fill="#1d1b2c">        PetType    VARCHAR(30) NOT NULL</text>
+  <text x="38" y="200" font-size="13" fill="#1d1b2c">        Age        INT, must be &gt; 0</text>
+
+  <!-- Adopters -->
+  <rect x="530" y="70" width="290" height="170" rx="10" fill="#EEF0F8" stroke="#091747" stroke-width="2"/>
+  <rect x="530" y="70" width="290" height="36" rx="10" fill="#091747"/>
+  <text x="675" y="95" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Adopters</text>
+  <text x="548" y="128" font-size="13" fill="#1d1b2c"><tspan font-weight="700" fill="#091747">PK</tspan>   AdopterID   INT</text>
+  <text x="548" y="152" font-size="13" fill="#1d1b2c">        AdopterName VARCHAR(30) NOT NULL</text>
+  <text x="548" y="176" font-size="13" fill="#1d1b2c">        Email       VARCHAR(50) UNIQUE</text>
+  <text x="548" y="200" font-size="13" fill="#1d1b2c">        City        VARCHAR(30) NOT NULL</text>
+
+  <!-- Adoption (links the two) -->
+  <rect x="285" y="250" width="270" height="130" rx="10" fill="#EEF0F8" stroke="#091747" stroke-width="2"/>
+  <rect x="285" y="250" width="270" height="36" rx="10" fill="#091747"/>
+  <text x="420" y="275" text-anchor="middle" font-size="16" font-weight="700" fill="#ffffff">Adoption</text>
+  <text x="303" y="306" font-size="13" fill="#1d1b2c"><tspan font-weight="700" fill="#091747">PK</tspan>   AdoptionID  INT</text>
+  <text x="303" y="330" font-size="13" fill="#1d1b2c"><tspan font-weight="700" fill="#091747">FK</tspan>   PetID       → Pets</text>
+  <text x="303" y="354" font-size="13" fill="#1d1b2c"><tspan font-weight="700" fill="#091747">FK</tspan>   AdopterID   → Adopters</text>
+
+  <!-- Relationships: one pet and one adopter can appear in many adoptions -->
+  <line x1="310" y1="155" x2="350" y2="250" stroke="#091747" stroke-width="2"/>
+  <line x1="530" y1="155" x2="490" y2="250" stroke="#091747" stroke-width="2"/>
+  <text x="318" y="170" font-size="14" font-weight="700" fill="#091747">1</text>
+  <text x="352" y="238" font-size="14" fill="#091747">many</text>
+  <text x="508" y="170" font-size="14" font-weight="700" fill="#091747">1</text>
+  <text x="446" y="238" font-size="14" fill="#091747">many</text>
+</svg>
